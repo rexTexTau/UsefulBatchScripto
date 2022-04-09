@@ -4,6 +4,8 @@ A collection of useful batch scripts to perform various jobs
 ## Archive, Protect and Copy (apc.bat)
 Creates the password-protected archive from the content of a given dir, then copies this archive to the list of dirs.
 
+Free 7za.exe archiver binary file **must**be put in the dir containing this batch file.
+
 Parameters:
 `%1` - directory to archive
 `%2` - %n - dirs to copy the archive to
@@ -31,4 +33,20 @@ Sample call:
 
 ```
 s2d.bat Projects "G:\My drive\Reserve copies" "C:\Users\admin\YandexDisk\Reserve"
+```
+
+## MSSQL DB Backup, Archive & Protect (mssqlbap.bat + mssqldb.sql)
+
+Backups the specified MSSQL db, then puts it into the password-protected archive from the content of a given dir, then copies this archive to the list of dirs.
+
+Free sqlcmd.exe and sqlcmd.rll tool binary files **must** be put in the dir containing this batch file.
+
+Remarks: mssqldb.sql also must be present in the same dir as batch file, otherwise the script will not work.
+
+Db server name, db login id, db password and archive password are stored within the batch file itself.
+
+Sample call:
+
+```
+mssqlbap.bat customers "G:\My drive\Reserve copies\Db"
 ```
