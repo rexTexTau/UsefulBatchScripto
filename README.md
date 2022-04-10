@@ -4,7 +4,7 @@ A collection of useful batch scripts to perform various jobs
 ## Archive, Protect and Copy (apc.bat)
 Creates the password-protected archive from the content of a given dir, then copies this archive to the list of dirs.
 
-Free 7za.exe archiver binary file **must**be put in the dir containing this batch file.
+Free 7za.exe archiver binary file **must** be put in the dir containing this batch file.
 
 Parameters:
 `%1` - directory to archive
