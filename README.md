@@ -10,7 +10,7 @@ Parameters:
 `%1` - directory to archive
 `%2` - %n - dirs to copy the archive to
 
-Remarks: bin, obj and node_modules subdirectories are excluded from the archive creation.
+Remarks: bin, obj, packages and node_modules subdirectories are excluded from the archive creation.
 
 Password is stored within the batch file itself.
 

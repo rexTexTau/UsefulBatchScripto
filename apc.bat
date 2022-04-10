@@ -12,7 +12,7 @@ set "pwd=ReplaceThisWithAnyPasswordOfYourChoice"
 set dir=%1
 shift
 
-7za.exe a -tzip -p"%pwd%" -xr!bin -xr!obj -xr!node_modules %dir%.zip %dir%
+7za.exe a -tzip -p"%pwd%" -xr!bin -xr!obj -xr!node_modules -xr!packages %dir%.zip %dir%
 
 :Loop
 robocopy . %1 %dir%.zip
