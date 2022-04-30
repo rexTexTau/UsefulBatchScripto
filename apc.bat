@@ -9,16 +9,18 @@ if %2.==. goto End
 
 set "pwd=ReplaceThisWithAnyPasswordOfYourChoice"
 
-set dir=%1
+set fullDir=%1
 shift
 
-7za.exe a -tzip -p"%pwd%" -xr!bin -xr!obj -xr!node_modules -xr!packages %dir%.zip %dir%
+for %%f in ("%fullDir%") do set shortDir=%%~nxf
+
+7za.exe a -tzip -p"%pwd%" -xr!bin -xr!obj -xr!node_modules -xr!packages %shortDir%.zip %fullDir%
 
 :Loop
-robocopy . %1 %dir%.zip
+robocopy . %1 %shortDir%.zip
 shift
 if not "%~1"=="" goto Loop
 
-del %dir%.zip
+del %shortDir%.zip
 
 :End
