@@ -7,8 +7,11 @@ Creates the password-protected archive from the content of a given dir, then cop
 Free 7za.exe archiver binary file **must** be put in the dir containing this batch file.
 
 Parameters:
+
 `%1` - directory to archive
-`%2` - %n - dirs to copy the archive to
+
+`%2` - `%n` - dirs to copy the archive to
+
 
 Remarks: bin, obj, packages and node_modules subdirectories are excluded from the archive creation.
 
